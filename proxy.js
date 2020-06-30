@@ -10,7 +10,8 @@ process.on('uncaughtException', err => {
 })
 
 if (!addr.from || !addr.to) {
-    console.log('Usage: <from> <to>')
+    console.log(`Usage: node ${process.argv[1]} <host:port> <host:port>`)
+    console.log('First <host:port> is "from", second <host:port> is "to".')
     return
 }
 
